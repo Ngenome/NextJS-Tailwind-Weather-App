@@ -2,6 +2,10 @@
 
 Welcome to the Next.js Weather Forecast App! This app allows users to search for a location and retrieve the current weather conditions as well as a five-day forecast. It is built using Next.js 13, Typescript, Redux, and Tailwind CSS.
 
+<!-- link to the figma design -->
+
+Here is the figma design: [Figma Design](https://www.figma.com/file/3ur1CH6BNYKO3cbad0Ikjr/Weather-App---Website-Design---Kelvin-Ng'eno?type=design&node-id=1-7&t=izqfULAwK8NDiFa1-01)
+
 ## Key Requirements and Features
 
 - Display current weather conditions for a searched location
@@ -29,7 +33,7 @@ Before you begin, make sure you have the following installed on your system:
 
 2. Navigate to the project's directory:
 
-`cd nextjs-weather-forecast-app`
+`cd NextJS-Tailwind-Weather-App`
 
 3. Install the dependencies:
 
