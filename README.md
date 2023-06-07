@@ -37,11 +37,11 @@ Before you begin, make sure you have the following installed on your system:
 
 ### Configuration
 
-The app requires an API key to autocomplete the location using `google-places-autocomplete-api`. Check if there is a `.env` file provided with the app's source code. If not, create a new `.env` file in the project's root directory and add the following line:
+The app requires an API key to autocomplete the location using `google-places-autocomplete-api`. Check if there is a `.env.local` file provided with the app's source code. If not, create a new `.env.local` file in the project's root directory and add the following line:
 
-API_KEY=your-api-key
+NEXT_PUBLIC_MAPS_API_KEY=`<your-google-api-key>`
 
-Replace `your-api-key` with your actual API key for the weather API you are using.
+Replace `your-google-api-key` with your actual API key for the weather API you are using.
 
 ### Running the App
 
@@ -73,4 +73,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-The app is released under the [MIT License](LICENSE).
+The app is released under the [Apache-2.0 License](LICENSE).
