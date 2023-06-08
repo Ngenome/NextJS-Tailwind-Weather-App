@@ -6,6 +6,8 @@ Welcome to the Next.js Weather Forecast App! This app allows users to search for
 
 Here is the figma design: [Figma Design](https://www.figma.com/file/3ur1CH6BNYKO3cbad0Ikjr/Weather-App---Website-Design---Kelvin-Ng'eno?type=design&node-id=1-7&t=izqfULAwK8NDiFa1-01)
 
+View the web app [Weather App](https://dissolve-weather.vercel.app/)
+
 ## Key Requirements and Features
 
 - Display current weather conditions for a searched location
@@ -23,7 +25,7 @@ Follow these steps to set up and run the app locally on your machine.
 
 Before you begin, make sure you have the following installed on your system:
 
-- Node.js v16.17.1
+- Node.js v16.17.1 or later
 - Git
 
 ### Installation
