@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import HourlyWeatherView from "./HourlyWeatherView";
 import DailyWeatherView from "./DailyWeatherView";
 import { Status, WeatherData } from "@/types";
+import { useAppDispatch, useAppSelector } from "@/hooks/redux";
+import { setActiveTab } from "@/redux/features/tabs";
 
 const WeatherTabs: React.FC<{
   forecast: WeatherData;
   status: Status;
 }> = ({ forecast, status }) => {
   type Tab = "hourly" | "weekly";
-  const [activeTab, setActiveTab] = useState<Tab>("hourly");
+  const dispatch = useAppDispatch();
+  const activeTab = useAppSelector((state) => state.activeTab);
 
   const handleTabChange = (tab: Tab) => {
-    setActiveTab(tab);
+    dispatch(setActiveTab(tab));
   };
 
   return (

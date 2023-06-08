@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             target="_blank"
             className="bg-clip-text text-underline text-transparent bg-gradient-to-r from-blue-950 to-blue-500"
           >
-            Kelvin Ng'eno
+            Kelvin Ng&apos;eno
           </a>
         </p>
       </div>
@@ -48,7 +48,12 @@ const Home: React.FC = () => {
               }}
             />
           )}
-          <WeatherTabs forecast={forecast} status={status} />
+          {status.status === "error" ? (
+            <div className="flex flex-col items-center justify-center bg-gradient-br from-white to-transparent border-gray-200 backdrop-blur-none">
+              <p className="text-red-500 text-center">{status?.error}</p>
+            </div>
+          ) : null}
+          <WeatherTabs forecast={forecast} status={status.status} />
           {showWeatherSearchIllustration ? (
             <div className="flex flex-col items-center justify-center bg-gradient-br from-white to-transparent border-gray-200 backdrop-blur-none">
               <img

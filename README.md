@@ -24,6 +24,7 @@ Follow these steps to set up and run the app locally on your machine.
 Before you begin, make sure you have the following installed on your system:
 
 - Node.js v16.17.1
+- Git
 
 ### Installation
 
