@@ -19,28 +19,30 @@ const WeatherTabs: React.FC<{
 
   return (
     <div className="flex flex-col items-center py-4">
-      <div className="flex space-x-4">
-        <button
-          className={`px-4 py-2 rounded-lg ${
-            activeTab === "hourly"
-              ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
-              : "bg-gray-200 text-gray-700"
-          }`}
-          onClick={() => handleTabChange("hourly")}
-        >
-          Hourly
-        </button>
-        <button
-          className={`px-4 py-2 rounded-lg ${
-            activeTab === "weekly"
-              ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
-              : "bg-gray-200 text-gray-700"
-          }`}
-          onClick={() => handleTabChange("weekly")}
-        >
-          Weekly
-        </button>
-      </div>
+      {status !== "idle" ? (
+        <div className="flex space-x-4">
+          <button
+            className={`px-4 py-2 rounded-lg ${
+              activeTab === "hourly"
+                ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+                : "bg-gray-200 text-gray-700"
+            }`}
+            onClick={() => handleTabChange("hourly")}
+          >
+            Hourly
+          </button>
+          <button
+            className={`px-4 py-2 rounded-lg ${
+              activeTab === "weekly"
+                ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+                : "bg-gray-200 text-gray-700"
+            }`}
+            onClick={() => handleTabChange("weekly")}
+          >
+            Weekly
+          </button>
+        </div>
+      ) : null}
 
       {status === "loading" ? (
         <div className="flex items-center justify-center">

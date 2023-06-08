@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   } = useWeatherForecast();
 
   return (
-    <main className="min-h-screen  w-screen overflow-hidden relative">
+    <main className="min-h-screen items-center  w-screen overflow-hidden relative">
       <div className="w-screen bg-gradient-to-r from-gray-100 to-white bg-opacity-80 backdrop-blur-sm fixed z-10 top-0 items-center flex flex-col">
         <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-950 to-blue-500">
           Weather App
@@ -54,15 +54,6 @@ const Home: React.FC = () => {
             </div>
           ) : null}
           <WeatherTabs forecast={forecast} status={status.status} />
-          {showWeatherSearchIllustration ? (
-            <div className="flex flex-col items-center justify-center bg-gradient-br from-white to-transparent border-gray-200 backdrop-blur-none">
-              <img
-                src="/weather-search.png"
-                className="w-96"
-                alt="Weather Search"
-              />
-            </div>
-          ) : null}
         </div>
       </div>
     </main>

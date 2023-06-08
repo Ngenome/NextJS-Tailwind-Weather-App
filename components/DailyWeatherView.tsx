@@ -111,9 +111,11 @@ const DailyWeatherView: React.FC<DailyWeatherCardProps> = ({ data }) => {
 
   return (
     <div className="bg-transparent shadow-lg rounded-lg p-6">
-      <h2 className="text-lg md:text-xl font-bold mb-4 text-white bg-gradient-to-r from-blue-500 to-blue-800 px-2 py-1 rounded-sm">
-        The Forecast for the next 5 days
-      </h2>
+      {daily?.time ? (
+        <h2 className="text-lg md:text-xl font-bold mb-4 text-white bg-gradient-to-r from-blue-500 to-blue-800 px-2 py-1 rounded-sm">
+          The Forecast for the next 5 days
+        </h2>
+      ) : null}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {daily?.time.slice(0, 6).map((time, index) => (
           <DailyWeatherCard

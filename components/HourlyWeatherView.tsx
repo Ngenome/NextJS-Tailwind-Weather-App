@@ -150,9 +150,11 @@ const HourlyWeatherView: React.FC<HourlyWeatherCardProps> = ({ data }) => {
 
   return (
     <div className="bg-transparent shadow-lg rounded-lg p-6">
-      <h2 className="text-lg md:text-xl font-bold mb-4 text-white bg-blue-600 px-2 py-1 rounded-sm">
-        Today&apos;s Hourly Weather
-      </h2>
+      {hourly?.time.length > 0 && (
+        <h2 className="text-lg md:text-xl font-bold mb-4 text-white bg-blue-600 px-2 py-1 rounded-sm">
+          Today&apos;s Hourly Weather
+        </h2>
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {hourly?.time.slice(0, 24).map((time, index) => (
           <HourlyWeatherCard
