@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   } = useWeatherForecast();
 
   return (
-    <main className="min-h-screen items-center  w-screen overflow-hidden relative">
+    <main className="min-h-screen  flex flex-col items-center  w-screen overflow-hidden relative justify-center">
       <div className="w-screen bg-gradient-to-r from-gray-100 to-white bg-opacity-80 backdrop-blur-sm fixed z-10 top-0 items-center flex flex-col">
         <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-950 to-blue-500">
           Weather App
@@ -33,8 +33,8 @@ const Home: React.FC = () => {
           </a>
         </p>
       </div>
-      <div className="flex w-screen overflow-hidden flex-col items-center justify-between p-24">
-        <div className="flex flex-col w-screen px-2 items-center justify-center">
+      <div className="flex w-screen  overflow-hidden flex-col items-center justify-between p-24">
+        <div className="flex flex-col w-screen px-2 items-center justify-center mt-10">
           {GOOGLE_API_KEY && (
             <GooglePlacesAutocomplete
               apiKey={GOOGLE_API_KEY}
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
               autocompletionRequest={{}}
               selectProps={{
                 placeholder: "Enter a location to view its  forecast",
-                className: "w-full md:w-96",
+                className: "w-full sm:w-96",
                 value: autocompleteLocation,
                 onChange: handleAutocompleteChange,
               }}
